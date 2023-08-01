@@ -3,7 +3,6 @@
 ## Author : Markus Männil
 
 This is my Java Task solution
-I will explain here how my system works
 
 I followed the standard developing structure (frontend <-> controller <-> service <-> repository <-> database)
 
