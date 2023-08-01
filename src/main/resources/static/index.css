@@ -1,0 +1,18 @@
+
+.error{
+    color: red;
+}
+
+.saved{
+    animation: fadeOut 2s forwards;
+    animation-delay: 5s;
+    background: white;
+    color: limegreen;
+    padding: 10px;
+
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}

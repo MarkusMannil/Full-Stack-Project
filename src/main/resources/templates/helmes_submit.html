@@ -1,0 +1,40 @@
+<!-- saved from url=(0094)file:///C:/Users/oliver.stimmer/AppData/Roaming/Skype/My%20Skype%20Received%20Files/index.html -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+
+<body>Form submitted, you can still edit your profile.
+<br>
+<br>
+<form action="#" th:action="@{/edit}" th:object="${data_transfer_object}" method="post">
+    <p>
+        <la>Name:</la>
+        <input readonly type="text" th:field="*{name}" th:value="*{name}">
+
+    </p>
+
+    <p>
+        <la>Sectors:</la>
+        <select id="select" multiple="multiple" size="10" th:field="*{selectedSectors}">
+            <option
+                    th:each="s : ${sectors}"
+                    th:value="${s.getId()}"
+                    th:utext=" ${s.offsetAndName()}">
+            </option>
+        </select>
+        <p th:if="${#fields.hasErrors('selectedSectors')}" th:errorclass="error" th:errors="*{selectedSectors}"/>
+    </p>
+
+    <p>
+        <input type="checkbox" th:field="*{terms}"> Agree to terms
+        <p th:if="${#fields.hasErrors('terms')}" th:errorclass="error" th:errors="*{terms}"/>
+    </p>
+
+    <input type="submit" value="Save"/>
+</form>
+<p class="saved" th:text="'User ' + ${data_transfer_object.name} +' has been updated' "> </p>
+</body>
+</html>
