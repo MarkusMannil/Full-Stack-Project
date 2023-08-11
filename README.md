@@ -12,7 +12,8 @@ I used PostgreSql because I have worked with it before in the university. <br>
 Database is named test, which I couldn't change afterwards for some reason. <br> 
 For connecting with the database in the file (src/main/resources/) application.properties 
 set the database url to path where your postgres server is running. 
-I made a new user in postgres named "spring" and gave it permission to alter the database. 
+I made a new user in postgres named "spring" and gave it permission to alter the database. <br>
+Database can be restored from the backup file: helmes_java_task_database.backup
 
 ### Tables
 
